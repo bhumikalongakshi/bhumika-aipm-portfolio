@@ -39,3 +39,77 @@ documents, and generate grounded, explainable answers — not hallucinations.
 ---
 
 ## 🏗 Architecture
+User Query
+↓
+Query Embedding (AWS Bedrock Embeddings)
+↓
+Vector Search (Retrieval Layer)
+↓
+Top-K Relevant Document Chunks Retrieved
+↓
+Prompt Construction (Query + Context + System Instructions)
+↓
+LLM Generation (AWS Bedrock — Claude / Titan)
+↓
+Response Validation Layer (confidence check, source citation)
+↓
+Grounded Response Returned to User
+
+---
+
+## 🔑 Key PM Decisions & Tradeoffs
+
+**Decision 1: RAG over Fine-tuning**  
+Fine-tuning would require retraining on every document update. RAG keeps the 
+knowledge base live and updateable — critical for enterprise where docs change 
+frequently. Chose RAG for maintainability and explainability.
+
+**Decision 2: Response Validation Layer**  
+Added a confidence-scoring layer that flags low-confidence responses rather than 
+returning them silently. Enterprise users need to trust the system — a "I'm not 
+sure, please verify" is better than a confident wrong answer.
+
+**Decision 3: AWS Bedrock over OpenAI API**  
+Enterprise security requirements mandated data residency within our existing 
+AWS environment. Bedrock kept all data within our VPC, eliminating data egress 
+risks and simplifying compliance review.
+
+---
+
+## 📊 Success Metrics (KPIs)
+
+| KPI | Target | Result |
+|-----|--------|--------|
+| Response Grounding Accuracy | > 85% | ✅ Achieved |
+| Average Query Response Time | < 5 seconds | ✅ Achieved |
+| Reduction in manual search time | > 50% | ✅ Achieved |
+| User Satisfaction Score | > 4/5 | ✅ Achieved |
+
+---
+
+## 📁 PM Artifacts
+
+- [`docs/PRD.md`](./docs/PRD.md) — Product Requirements Document
+- [`docs/architecture-diagram.png`](./docs/architecture-diagram.png) — System Architecture
+- [`docs/prompt-design-patterns.md`](./docs/prompt-design-patterns.md) — Prompt Engineering Decisions
+
+---
+
+## 🚀 What I'd Build Next (V2 Roadmap)
+
+- **Multi-turn conversation memory** — context retention across a session
+- **User feedback loop** — thumbs up/down to improve retrieval ranking over time
+- **Source citation UI** — show which document chunk each answer came from
+- **RAGAS evaluation framework** — automated evaluation of retrieval and 
+  generation quality
+
+---
+
+## 💡 Key Learnings
+
+1. Explainability > Accuracy for enterprise trust — users need to see *why* 
+   an answer was given, not just what it is
+2. Prompt design is a product decision, not just an engineering task — 
+   the system prompt defines the product's personality and guardrails
+3. Retrieval quality is the real bottleneck in RAG — investing in chunking 
+   strategy and embedding quality pays more than fine-tuning the LLM
