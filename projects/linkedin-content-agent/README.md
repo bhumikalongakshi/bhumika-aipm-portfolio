@@ -60,7 +60,32 @@ I still review and edit the final post before posting it.
 
 ## Workflow
 
-*(Insert architecture diagram here)*
+                  LinkedIn Content Workflow
+
+                 Rough Notes / Ideas
+                         │
+                         ▼
+                 OpenAI Content Agent
+                         │
+         ┌───────────────┴───────────────┐
+         ▼                               ▼
+ LinkedIn Draft                 Image Prompt
+         │                               │
+         └───────────────┬───────────────┘
+                         ▼
+                Pollinations AI
+                         │
+                         ▼
+                Generated Image
+                         │
+                         ▼
+                 Gmail Notification
+                         │
+                         ▼
+                  Human Review
+                         │
+                         ▼
+                 Publish to LinkedIn
 
 ![Workflow](assets/workflow.png)
 
