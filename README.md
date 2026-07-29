@@ -23,9 +23,9 @@ This portfolio documents my AI product work — real projects, product thinking,
 
 | # | Project | Type | Stack | Status |
 |---|---------|------|-------|--------|
-| 01 | [AI Knowledge Assistant — RAG Chatbot](./01-ai-knowledge-assistant/) | Enterprise AI | AWS Bedrock, RAG, Python | ✅ Shipped at Halliburton |
-| 02 | [Enterprise Company — Global VDR Deployment](./02-case-studies/enterprise-vdr.md) | PM Case Study | Enterprise SaaS | ✅ Shipped at Halliburton |
-| 03 | [Case Study: AppStream SAML SSO Rollout](./02-case-studies/appstream-saml-sso.md) | PM Case Study | AWS AppStream, Keycloak | ✅ Shipped at Halliburton |
+| 01 | [AI Knowledge Assistant — RAG Chatbot](./ai-knowledge-assistant/) | Enterprise AI | AWS Bedrock, RAG, Python | ✅ Shipped at Halliburton |
+| 02 | [Enterprise Company — Global VDR Deployment](./case-studies/enterprise-vdr.md) | PM Case Study | Enterprise SaaS | ✅ Shipped at Halliburton |
+| 03 | [Case Study: AppStream SAML SSO Rollout](./case-studies/appstream-saml-sso.md) | PM Case Study | AWS AppStream, Keycloak | ✅ Shipped at Halliburton |
 
 ---
 
