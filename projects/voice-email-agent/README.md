@@ -56,6 +56,50 @@ The workflow extracts the important information, generates an email draft, and s
 The workflow can easily be extended to support different email templates and business use cases.
 
 ---
+## Architecture Diagram
+          User Speaks
+
+               │
+
+               ▼
+
+        ElevenLabs Agent
+
+               │
+
+               ▼
+
+            Webhook
+
+               │
+
+               ▼
+
+             n8n Flow
+
+               │
+
+      Extract Information
+
+               │
+
+               ▼
+
+         Generate Email
+
+               │
+
+               ▼
+
+              Gmail
+
+               │
+
+               ▼
+
+          Email Delivered
+
+---
 
 ## Workflow
 
