@@ -1,6 +1,6 @@
-# Voice Email Agent
+# Ask A Friend
 
-A voice-enabled AI workflow that listens to a user's request, extracts the required information, and automatically drafts and sends an email.
+A simple AI web application that responds like a thoughtful friend instead of a traditional chatbot.
 
 ---
 
@@ -10,56 +10,83 @@ Status: ✅ Completed
 
 Built With
 
-- ElevenLabs
-- n8n
-- Gmail
-- Webhooks
-- OpenAI
+- LLM
+- Prompt Engineering
+- Web Application
 
 Skills Practiced
 
-- Voice AI
-- Webhooks
-- Workflow Automation
-- API Integration
+- Conversational AI
+- Prompt Design
+- User Experience
 
 ---
 
 ## Why I Built This
 
-I wanted to understand how voice interfaces interact with automation tools.
+Most AI assistants focus on answering questions correctly.
 
-Instead of building another chatbot, I experimented with creating a voice assistant that could collect information naturally and trigger an automated workflow to send an email.
+I wanted to experiment with a different goal: making conversations feel more natural and supportive.
 
-This project helped me connect conversational AI with backend automation.
+Rather than providing factual answers alone, the application attempts to respond like a trusted friend.
 
 ---
 
 ## Problem
 
-Sending emails still requires multiple manual steps.
+Many AI assistants sound robotic.
 
-Could a user simply speak, and have an email prepared automatically?
-
-This project explores that idea.
+Could prompting alone make conversations feel warmer and more personal?
 
 ---
 
 ## Solution
 
-The voice assistant listens to the user's request.
+The application accepts a user's question and generates a conversational response designed to sound supportive, encouraging, and natural.
 
-The conversation is passed to an n8n workflow through a webhook.
-
-The workflow extracts the important information, generates an email draft, and sends it using Gmail.
-
-The workflow can easily be extended to support different email templates and business use cases.
+The focus was less on technical complexity and more on improving the user experience through prompt design.
 
 ---
 
+## Architecture 
+
+        User Question
+
+              │
+
+              ▼
+
+         Web Interface
+
+              │
+
+              ▼
+
+      Prompt Engineering
+
+              │
+
+              ▼
+
+             LLM
+
+              │
+
+              ▼
+
+     Friendly AI Response
+
+              │
+
+              ▼
+
+        User Receives Reply
+
+---        
+
 ## Workflow
 
-(Add workflow image)
+(Add workflow)
 
 ## Demo
 
@@ -67,35 +94,33 @@ The workflow can easily be extended to support different email templates and bus
 
 ## Screenshots
 
-Voice Agent
+Homepage
 
-Webhook
+Conversation
 
-n8n Workflow
-
-Generated Email
+AI Response
 
 ---
 
 ## Challenges
 
-Getting the voice agent and webhook to communicate reliably required several rounds of testing.
+Finding the right balance between empathy and usefulness required several prompt iterations.
 
-I also learned how important structured outputs are when passing information between AI and automation tools.
+Small wording changes often produced very different responses.
 
 ---
 
 ## Lessons Learned
 
-- Voice interfaces require clear prompts.
-- Webhooks make different systems easy to connect.
-- AI works better when each component has a focused responsibility.
+- Prompt wording significantly affects conversational tone.
+- Simplicity often leads to a better user experience.
+- User experience matters just as much as model capability.
 
 ---
 
 ## Future Improvements
 
-- Multiple email templates
-- Calendar integration
-- CRM integration
-- User confirmation before sending
+- Conversation memory
+- Multiple personalities
+- Feedback collection
+- Mobile interface
