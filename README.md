@@ -2,7 +2,7 @@ Bhumika Longakshi — AI PM Portfolio
 
 **Technical Product Manager | AI-Native SaaS | RAG & Agentic AI**
 
-📍 India &nbsp;|&nbsp; 🔗 [LinkedIn](https://linkedin.com/in/bhumika-longakshi) &nbsp;|&nbsp; 📧 bhumikalongakshi@gmail.com
+📍 India &nbsp;|&nbsp; 🔗 [LinkedIn](https://linkedin.com/in/bhumika-longakshi) &nbsp;|&nbsp; 📧 bhumikalongakshi@gmail.com &nbsp;|&nbsp; 🔗 [Portfolio](https://bhumika-longakshi-portfolio.vercel.app/) &nbsp;|&nbsp;
 
 ---
 
